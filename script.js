@@ -552,7 +552,20 @@ function validatePassword() {
     const password = elements.passwordInput.value.trim();
     console.log('Validando senha:', password);
     
-    if (password === config.password) {
+    // Remove barras e hifens para normalizar o formato
+    const normalizedPassword = password.replace(/[\/\-]/g, '');
+    console.log('Senha normalizada:', normalizedPassword);
+    
+    // Lista de variações válidas da data
+    const validDates = [
+        '21022024', // 21/02/2024 ou 21-02-2024
+        '210224'    // 21/02/24 ou 21-02-24
+    ];
+    
+    console.log('Datas válidas:', validDates);
+    console.log('Senha está na lista?', validDates.includes(normalizedPassword));
+    
+    if (validDates.includes(normalizedPassword)) {
         console.log('Senha correta!');
         hideError();
         elements.loginScreen.style.opacity = '0';
@@ -563,7 +576,7 @@ function validatePassword() {
         initAlbum(); // Chama initAlbum aqui para carregar o conteúdo após o login
     } else {
         console.log('Senha incorreta!');
-        showError('Senha incorreta. Tente novamente.');
+        showError('Data incorreta. Tente novamente.');
         elements.passwordInput.value = '';
         elements.passwordInput.focus();
     }
