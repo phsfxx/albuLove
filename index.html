@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Nosso Álbum de Amor</title>
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de Login -->
+    <div id="login-screen">
+        <div class="login-container">
+            <h1>Nosso Álbum de Amor</h1>
+            <p class="subtitle">Um lugar especial para nossas memórias</p>
+            <div class="login-form">
+                <input type="password" id="password-input" placeholder="Digite nossa senha especial" autocomplete="off">
+                <button id="login-button">Acessar</button>
+                <div id="error-message" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div id="main-content">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-content">
+                <h1>Nossos Momentos</h1>
+                <p class="subtitle">Cada foto conta uma história de amor</p>
+            </div>
+            
+            <!-- Menu de Navegação -->
+            <nav class="nav-menu">
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active" data-section="inicio-namoro">Início do Namoro</a></li>
+                    <li><a href="#" class="nav-link" data-section="roles">Rolês</a></li>
+                    <li><a href="#" class="nav-link" data-section="treinos">Treinos</a></li>
+                    <li><a href="#" class="nav-link" data-section="viagens">Viagens</a></li>
+                    <li><a href="#" class="nav-link" data-section="momentos">Momentos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content-wrapper">
+            <section id="inicio-namoro" class="content-section active">
+                <h2>💑 Início do Namoro</h2>
+                <div class="gallery-grid"></div>
+            </section>
+
+            <section id="roles" class="content-section">
+                <h2>🎉 Rolês</h2>
+                <div class="gallery-grid"></div>
+            </section>
+
+            <section id="treinos" class="content-section">
+                <h2>🏋️‍♀️ Treinos</h2>
+                <div class="gallery-grid"></div>
+            </section>
+
+            <section id="viagens" class="content-section">
+                <h2>✈️ Viagens</h2>
+                <div class="gallery-grid"></div>
+            </section>
+
+            <section id="momentos" class="content-section">
+                <h2>🌟 Momentos que Marcaram</h2>
+                <div class="gallery-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html> 
