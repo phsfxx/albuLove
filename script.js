@@ -259,11 +259,6 @@ const config = {
             },
             {
                 type: "image",
-                url: "media/treinos/1749498390945.jpg",
-                caption: "🏋️‍♀️ Juntos somos mais fortes"
-            },
-            {
-                type: "image",
                 url: "media/treinos/1749498390935.jpg",
                 caption: "💑 Motivação mútua"
             },
